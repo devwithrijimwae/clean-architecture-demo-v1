@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="clean-architecture-demo-v1/clean-architecture-demo-v1.csproj" />
+  <Project Path="myapp-application/myapp-application.csproj" />
+  <Project Path="myapp-domain/myapp-domain.csproj" />
+  <Project Path="myapp-infrastructure/myapp-infrastructure.csproj" />
+</Solution>
