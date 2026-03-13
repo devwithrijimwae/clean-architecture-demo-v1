@@ -1,15 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+using MediatR.NotificationPublishers;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace myapp_application
 {
-  public static class DependencyInjection
+    public static class DependencyInjection
     {
-        public static IServiceCollection AddAplicationtionDI(this IServiceCollection services)
+        public static IServiceCollection AddApplicationDI(this IServiceCollection services)
+        {
+            services.AddMediatR(cfg =>
             {
-            services.AddAplicationtionDI();
-            services.AddAplicationtionDI();
-                
-                return services;
+                cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
+                cfg.NotificationPublisher = new TaskWhenAllPublisher();
+            });
+
+            return services;
         }
-  }
+    }
+    public class ApplicationAssemblyReference { }
 }

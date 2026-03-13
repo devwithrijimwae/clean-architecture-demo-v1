@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using myapp_application.Commands;
 using myapp_application.Queries;
 using myapp_domain.Entities;

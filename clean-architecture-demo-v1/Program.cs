@@ -1,3 +1,4 @@
+using clean_architecture_demo_v1;
 using myapp_application;
 using myapp_infrastructure;
 
@@ -9,8 +10,7 @@ builder.Services.AddSwaggerGen();
 
 
 
-builder.Services.AddAplicationtionDI();
-builder.Services.AddInfrastructureDI();
+builder.Services.AddApiDI(builder.Configuration);
 
 
 var app = builder.Build();
