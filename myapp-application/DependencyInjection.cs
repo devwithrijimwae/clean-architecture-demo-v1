@@ -4,10 +4,11 @@ namespace myapp_application
 {
   public static class DependencyInjection
     {
-        public static IServiceCollection AddApplicationDI(this IServiceCollection services)
+        public static IServiceCollection AddAplicationtionDI(this IServiceCollection services)
             {
-                services.AddApplicationDI()
-                    .AddIfrastructureDI();
+            services.AddAplicationtionDI();
+            services.AddAplicationtionDI();
+                
                 return services;
         }
   }

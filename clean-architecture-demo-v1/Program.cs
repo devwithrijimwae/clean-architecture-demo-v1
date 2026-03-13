@@ -7,7 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddApplicationDI();
+
+
+builder.Services.AddAplicationtionDI();
 builder.Services.AddInfrastructureDI();
 
 
