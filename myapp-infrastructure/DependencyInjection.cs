@@ -25,6 +25,17 @@ namespace myapp_infrastructure
             });
 
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IExternalVendorRepository, ExternalVendorRepository>();
+
+            services.AddHttpClient<ICoindeskHttpClientService, CoindeskHttpClientService>(option =>
+            {
+                option.BaseAddress = new Uri("https://api.coindesk.com/v1/");
+            });
+            services.AddHttpClient<IJokeHttpClientService, JokeHttpClientService>(option =>
+            {
+                option.BaseAddress = new Uri("https://official-joke-api.appspot.com/");
+            });
+
             return services;
         }
     }
